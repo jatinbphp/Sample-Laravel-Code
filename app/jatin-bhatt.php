@@ -16,6 +16,6 @@ Route::get('buy/{cookies}', function ($cookies) {
         Log::info('User ' . $user->email . ' have bought ' . $cookies . ' cookies at ' . date("d-m-Y H:i:s"));
         return 'Success, you have bought ' . $cookies . ' cookies!';
     } else {
-        return 'Error, you enough all at balance';
+        return 'Error, you do not have enough wallet balance';
     }
 })->where('cookies', '[0-9]+');
